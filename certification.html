@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Amrutha G S</title>
+    <meta name="description" content="Certifications of Amrutha G S">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cert-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform var(--transition-speed);
+        }
+        .cert-card:hover {
+            transform: translateY(-10px);
+        }
+        .cert-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 3rem;
+        }
+        .cert-content {
+            padding: 1.5rem;
+        }
+        .cert-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .cert-content p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: #fff;
+            padding: 10px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--text-primary);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close-modal:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AMRUTHA.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certification.html">Certifications</a></li>
+            <li><a href="linkedin.html">LinkedIn</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="fade-up">
+            <h2>Certifications</h2>
+            <p>Professional certifications and continuous learning achievements.</p>
+            <p style="font-size: 0.9rem; margin-top: -1rem; margin-bottom: 2rem;">(Certificates will be added here soon)</p>
+            
+            <div class="grid">
+                <!-- Certificate 1 -->
+                <div class="cert-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="cert-image">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Web Development Bootcamp</h3>
+                        <p>Issued by Udemy</p>
+                        <button class="btn btn-outline view-cert-btn" data-cert="assets/sample-cert.pdf" style="padding: 0.5rem 1rem; font-size: 0.9rem; width: 100%;">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="cert-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="cert-image">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>React Developer Certification</h3>
+                        <p>Issued by Coursera</p>
+                        <button class="btn btn-outline view-cert-btn" data-cert="assets/sample-cert.pdf" style="padding: 0.5rem 1rem; font-size: 0.9rem; width: 100%;">
+                            <i class="fas fa-eye"></i> View Certificate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certModal">
+        <span class="close-modal">&times;</span>
+        <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); text-align: center; max-width: 600px; margin: 0 20px;">
+            <i class="fas fa-file-alt" style="font-size: 4rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+            <h3>Certificate Viewer</h3>
+            <p style="margin: 1rem 0;">Once you add your certificates, they will be displayed here.</p>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Currently showing placeholder content.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/amrutha-g-s-ba7b00316" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:contact@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2024 Amrutha G S. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Modal Logic
+        const modal = document.getElementById('certModal');
+        const btns = document.querySelectorAll('.view-cert-btn');
+        const span = document.querySelector('.close-modal');
+
+        btns.forEach(btn => {
+            btn.onclick = function() {
+                modal.classList.add('active');
+            }
+        });
+
+        span.onclick = function() {
+            modal.classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amrutha G S</title>
+    <meta name="description" content="About Amrutha G S">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .stat-box {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">AMRUTHA.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certification.html">Certifications</a></li>
+            <li><a href="linkedin.html">LinkedIn</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="fade-up">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Amrutha G S, a dedicated professional with a passion for creating impactful and visually striking digital solutions. I believe in the power of minimalism, where every element serves a distinct purpose.</p>
+                    <p>My journey has been defined by continuous learning and pushing boundaries. I thrive in environments that challenge me to solve complex problems while maintaining a focus on user experience and aesthetics.</p>
+                    <p>Beyond my professional work, I am constantly exploring new technologies and design trends to stay at the forefront of the industry. My goal is not just to build, but to craft experiences that resonate.</p>
+                    <a href="Amrutha_GS_Resume.pdf" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="about-stats fade-up" style="transition-delay: 0.2s;">
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p style="margin:0;">Dedication</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p style="margin:0;">Learning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/amrutha-g-s-ba7b00316" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:contact@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2024 Amrutha G S. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
